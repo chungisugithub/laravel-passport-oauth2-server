@@ -20,4 +20,4 @@ Route::middleware('auth:api','scope:view-user')->get('/user', function (Request 
 
 
 Route::get('/posts', 'Api\PostsController@index')
-    ->middleware(['auth:api']);
+    ->middleware(['auth:api','scope:view-posts']);
